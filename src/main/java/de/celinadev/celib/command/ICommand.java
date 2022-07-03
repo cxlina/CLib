@@ -1,4 +1,4 @@
-package de.celinadev.clib.command;
+package de.celinadev.celib.command;
 
 import org.bukkit.command.CommandSender;
 

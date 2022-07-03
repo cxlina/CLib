@@ -1,13 +1,13 @@
-package de.celinadev.clib;
+package de.celinadev.celib;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class CLib {
+public class CeLib {
 
     private JavaPlugin plugin;
-    private static CLib instance;
+    private static CeLib instance;
 
-    public CLib(JavaPlugin plugin) {
+    public CeLib(JavaPlugin plugin) {
         this.plugin = plugin;
         instance = this;
     }
@@ -16,7 +16,7 @@ public class CLib {
         return plugin;
     }
 
-    public static CLib getInstance() {
+    public static CeLib getInstance() {
         return instance;
     }
 }

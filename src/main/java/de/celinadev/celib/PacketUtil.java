@@ -1,4 +1,4 @@
-package de.celinadev.clib;
+package de.celinadev.celib;
 
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
@@ -29,8 +29,8 @@ public class PacketUtil {
             else if (obj instanceof Double v) out.writeDouble(v);
             else if (obj instanceof String v) out.writeUTF(v);
         }
-        if (!CLib.getInstance().getPlugin().getServer().getMessenger().isOutgoingChannelRegistered(CLib.getInstance().getPlugin(), CLib.getInstance().getPlugin().getName().toLowerCase() + ":" + channel))
-            CLib.getInstance().getPlugin().getServer().getMessenger().registerOutgoingPluginChannel(CLib.getInstance().getPlugin(), CLib.getInstance().getPlugin().getName().toLowerCase() + ":" + channel);
-        player.sendPluginMessage(CLib.getInstance().getPlugin(), CLib.getInstance().getPlugin().getName().toLowerCase() + ":" + channel, out.toByteArray());
+        if (!CeLib.getInstance().getPlugin().getServer().getMessenger().isOutgoingChannelRegistered(CeLib.getInstance().getPlugin(), CeLib.getInstance().getPlugin().getName().toLowerCase() + ":" + channel))
+            CeLib.getInstance().getPlugin().getServer().getMessenger().registerOutgoingPluginChannel(CeLib.getInstance().getPlugin(), CeLib.getInstance().getPlugin().getName().toLowerCase() + ":" + channel);
+        player.sendPluginMessage(CeLib.getInstance().getPlugin(), CeLib.getInstance().getPlugin().getName().toLowerCase() + ":" + channel, out.toByteArray());
     }
 }

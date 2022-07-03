@@ -1,4 +1,4 @@
-package de.celinadev.clib;
+package de.celinadev.celib;
 
 public class TranslationUtil {
 
@@ -10,7 +10,7 @@ public class TranslationUtil {
      * @return the corresponding translation, or the text itself if none found.
      */
     public static String translate(String s, Placeholder... placeholders) {
-        String s1 = CLib.getInstance().getPlugin().getConfig().getString("translations." + s);
+        String s1 = CeLib.getInstance().getPlugin().getConfig().getString("translations." + s);
         if (s1 == null) {
             return s;
         }

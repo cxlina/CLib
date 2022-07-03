@@ -1,4 +1,4 @@
-package de.celinadev.clib;
+package de.celinadev.celib;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -6,7 +6,7 @@ import org.bukkit.scheduler.BukkitTask;
 
 public class TaskUtil {
 
-    private static final JavaPlugin plugin = CLib.getInstance().getPlugin();
+    private static final JavaPlugin plugin = CeLib.getInstance().getPlugin();
 
     public static BukkitTask runDelayed(int delayedTicks, RunAction action) {
         return Bukkit.getScheduler().runTaskLater(plugin, action::run, delayedTicks);

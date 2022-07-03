@@ -1,4 +1,4 @@
-package de.celinadev.clib;
+package de.celinadev.celib;
 
 public class Placeholder {
 

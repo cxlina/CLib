@@ -1,6 +1,6 @@
-package de.celinadev.clib.command;
+package de.celinadev.celib.command;
 
-import de.celinadev.clib.CLib;
+import de.celinadev.celib.CeLib;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
@@ -13,11 +13,11 @@ public class CommandUtil implements CommandExecutor {
 
     public static void register(Command... commands) {
         for (Command command : commands) {
-            if (CLib.getInstance().getPlugin().getCommand(command.getName()) == null) {
-                CLib.getInstance().getPlugin().getLogger().warning("Couldn't register command '" + command.getName() + "' because it's null. You likely forgot to add it to your plugin.yml");
+            if (CeLib.getInstance().getPlugin().getCommand(command.getName()) == null) {
+                CeLib.getInstance().getPlugin().getLogger().warning("Couldn't register command '" + command.getName() + "' because it's null. You likely forgot to add it to your plugin.yml");
                 continue;
             }
-            CLib.getInstance().getPlugin().getCommand(command.getName()).setExecutor(new CommandUtil());
+            CeLib.getInstance().getPlugin().getCommand(command.getName()).setExecutor(new CommandUtil());
             registeredCommands.add(command);
         }
     }

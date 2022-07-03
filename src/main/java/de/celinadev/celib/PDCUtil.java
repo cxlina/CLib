@@ -1,6 +1,5 @@
-package de.celinadev.clib;
+package de.celinadev.celib;
 
-import de.celinadev.clib.CLib;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.persistence.PersistentDataContainer;
@@ -17,22 +16,22 @@ public class PDCUtil {
 
     public static void setString(Player player, String key, String data) {
         PersistentDataContainer pdc = player.getPersistentDataContainer();
-        pdc.set(new NamespacedKey(CLib.getInstance().getPlugin(), key), PersistentDataType.STRING, data);
+        pdc.set(new NamespacedKey(CeLib.getInstance().getPlugin(), key), PersistentDataType.STRING, data);
     }
 
     public static String getString(Player player, String key) {
         PersistentDataContainer pdc = player.getPersistentDataContainer();
-        return pdc.getOrDefault(new NamespacedKey(CLib.getInstance().getPlugin(), key), PersistentDataType.STRING, "");
+        return pdc.getOrDefault(new NamespacedKey(CeLib.getInstance().getPlugin(), key), PersistentDataType.STRING, "");
     }
 
     public static void setInt(Player player, String key, Integer data) {
         PersistentDataContainer pdc = player.getPersistentDataContainer();
-        pdc.set(new NamespacedKey(CLib.getInstance().getPlugin(), key), PersistentDataType.INTEGER, data);
+        pdc.set(new NamespacedKey(CeLib.getInstance().getPlugin(), key), PersistentDataType.INTEGER, data);
     }
 
     public static Integer getInt(Player player, String key) {
         PersistentDataContainer pdc = player.getPersistentDataContainer();
-        return pdc.getOrDefault(new NamespacedKey(CLib.getInstance().getPlugin(), key), PersistentDataType.INTEGER, 0);
+        return pdc.getOrDefault(new NamespacedKey(CeLib.getInstance().getPlugin(), key), PersistentDataType.INTEGER, 0);
     }
 
     public static void setBoolean(Player player, String key, Boolean data) {
