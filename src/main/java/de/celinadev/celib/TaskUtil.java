@@ -33,6 +33,6 @@ public class TaskUtil {
     }
 
     public interface RunAction {
-        public void run();
+        void run();
     }
 }
